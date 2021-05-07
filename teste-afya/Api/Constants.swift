@@ -12,7 +12,7 @@ struct Constants {
           return "http://api.tvmaze.com/"
         }
         
-        static let allSeries = "shows"
+        static let allSeries = "shows?page=%d"
         
         
     }

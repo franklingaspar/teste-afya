@@ -52,7 +52,7 @@ extension Routeable {
 
 enum Router: Routeable {
     
-    case allSeries
+    case allSeries(pagina: Int)
     
     internal var method: HTTPMethod {
         switch self {
@@ -66,9 +66,8 @@ enum Router: Routeable {
     internal var path: String {
         switch self {
         
-        case .allSeries:
-            return Constants.API.allSeries
-        
+        case .allSeries(let id):
+            return String(format: Constants.API.allSeries, id)
         }
     }
     

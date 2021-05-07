@@ -32,6 +32,9 @@
 		9248CA9F264452D700274F98 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248CA9E264452D700274F98 /* Schedule.swift */; };
 		9248CAA7264454AC00274F98 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248CAA6264454AC00274F98 /* Show.swift */; };
 		9248CAAC26445BCB00274F98 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248CAAB26445BCB00274F98 /* Error.swift */; };
+		9248CAB2264549FE00274F98 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248CAB1264549FE00274F98 /* HomeViewModel.swift */; };
+		9248CABA26455E5E00274F98 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248CAB926455E5E00274F98 /* BaseCollectionViewCell.swift */; };
+		9248CABF2645602300274F98 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248CABE2645602300274F98 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		9248CA9E264452D700274F98 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		9248CAA6264454AC00274F98 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		9248CAAB26445BCB00274F98 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		9248CAB1264549FE00274F98 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9248CAB926455E5E00274F98 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		9248CABE2645602300274F98 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,7 @@
 		9248CA2C264439C800274F98 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9248CAB0264549F000274F98 /* ViewModel */,
 				9248CA5126443D3700274F98 /* View */,
 				9248CA2D264439DC00274F98 /* ViewController */,
 			);
@@ -206,6 +213,7 @@
 			children = (
 				9248CA4126443C5100274F98 /* BaseView.swift */,
 				9248CA4626443C6A00274F98 /* BaseViewCell.swift */,
+				9248CAB926455E5E00274F98 /* BaseCollectionViewCell.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 				9248CA5926443E5200274F98 /* UIViewController.swift */,
 				9248CA6126443E9E00274F98 /* UIColor.swift */,
 				9248CA6F2644419500274F98 /* UIView.swift */,
+				9248CABE2645602300274F98 /* UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -265,6 +274,14 @@
 				9248CAA6264454AC00274F98 /* Show.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9248CAB0264549F000274F98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9248CAB1264549FE00274F98 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,10 +414,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9248CA702644419500274F98 /* UIView.swift in Sources */,
+				9248CAB2264549FE00274F98 /* HomeViewModel.swift in Sources */,
 				9248CA5326443D4000274F98 /* HomeView.swift in Sources */,
 				9248CA3626443A4600274F98 /* BaseViewController.swift in Sources */,
 				9248CA8A26444FE900274F98 /* AfyaApi.swift in Sources */,
 				9248CA992644510A00274F98 /* Router.swift in Sources */,
+				9248CABA26455E5E00274F98 /* BaseCollectionViewCell.swift in Sources */,
 				9248CA4726443C6A00274F98 /* BaseViewCell.swift in Sources */,
 				9248CA932644506B00274F98 /* RequestApi.swift in Sources */,
 				9248CA6826443F0200274F98 /* ConstantsColor.swift in Sources */,
@@ -410,6 +429,7 @@
 				9248CA4226443C5100274F98 /* BaseView.swift in Sources */,
 				9248CA78264441F200274F98 /* HomeViewCell.swift in Sources */,
 				9248CA6226443E9E00274F98 /* UIColor.swift in Sources */,
+				9248CABF2645602300274F98 /* UIImageView.swift in Sources */,
 				9248C9F92644387A00274F98 /* SceneDelegate.swift in Sources */,
 				9248CA2F264439EC00274F98 /* HomeViewController.swift in Sources */,
 				9248CA9F264452D700274F98 /* Schedule.swift in Sources */,

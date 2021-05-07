@@ -18,9 +18,9 @@ class AfyaApi {
     public static let shared = AfyaApi()
     
     //MARK: - Chamadas API
-    static func allSeries(completionHandler: @escaping (ResultType<[Show]>) -> Void) {
+    static func allSeries(pagina: Int,completionHandler: @escaping (ResultType<[Show]>) -> Void) {
         
-        RequestApi.makeRequest(type: [Show].self, toURL: Router.allSeries, completion: { (result) in
+        RequestApi.makeRequest(type: [Show].self, toURL: Router.allSeries(pagina: pagina), completion: { (result) in
             switch result {
             
             case .success(let response):

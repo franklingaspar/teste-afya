@@ -8,15 +8,29 @@
 import Foundation
 import UIKit
 
-class HomeViewCell: BaseViewCell {
+class HomeViewCell: BaseCollectionViewCell {
     
+    let imageView: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = false
+        view.makeShadow()
+        view.layer.cornerRadius = 5
+        return view
+    }()
     
-    override func initView() {
-        
+    override func prepareForReuse() {
+        imageView.image =  #imageLiteral(resourceName: "img-placeholder")
     }
     
     override func setupViews() {
+        self.contentView.addSubview(imageView)
         
+        imageView.anchor(top: self.topAnchor, paddingTop: 0, bottom: self.bottomAnchor, paddingBottom: 0, left: self.leftAnchor, paddingLeft: 0, right: self.rightAnchor, paddingRight: 0, width: 0, height: 0, centerVertical: false, centerHorizontal: false, view: self)
+    }
+    
+    func populateView(show: Show) {        
+        imageView.downloaded(from: (show.image?.original)!)
     }
     
 }
