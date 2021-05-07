@@ -12,8 +12,8 @@ class HomeViewCell: BaseCollectionViewCell {
     
     let imageView: UIImageView = {
         let view = UIImageView()
-        view.contentMode = .scaleAspectFill
-        view.clipsToBounds = false
+        view.contentMode = .scaleToFill
+        view.clipsToBounds = true
         view.makeShadow()
         view.layer.cornerRadius = 5
         return view

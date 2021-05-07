@@ -24,7 +24,7 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         self.title = "Home"
-        self.setColorNavBar(.colorByHexDecimal(hex: ConstantsColor.pink))
+        self.setDefaultColorNavBar()
         homeViewModel = HomeViewModel()
         homeViewModel?.delegate = self
         showLoad()
@@ -47,6 +47,12 @@ extension HomeViewController: HomeViewModelProtocool {
 }
 
 extension HomeViewController: HomeViewProtocool {
+    func clickSerie(serie: Show) {
+        let vc = SerieViewController()
+        vc.serie = serie
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func clickNext() {
         showLoad()
         pagina = pagina + 1

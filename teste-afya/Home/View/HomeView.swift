@@ -11,6 +11,7 @@ import UIKit
 protocol HomeViewProtocool {
     func clickNext()
     func clickPrevius()
+    func clickSerie(serie: Show)
 }
 
 class HomeView: BaseView {
@@ -38,12 +39,7 @@ class HomeView: BaseView {
     //MARK:views
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    let labelCount: UILabel = {
-        let view = UILabel()
-        view.textColor = .black
-        view.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium)
-        return view
-    }()
+    let labelCount = UILabel.makeBigText(title: "")
     
     var previusButton: UIButton?
     var nextButton:UIButton?
@@ -115,8 +111,8 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(
-            width: (self.frame.size.width/2.2),
-            height: (self.frame.size.width/2.2)
+            width: (self.frame.size.width/3.4),
+            height: (self.frame.size.width/2.5)
         )
     }
     
@@ -132,17 +128,9 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        
-//        let cell = collectionView.cellForItem(at: indexPath) as! MenuCollectionViewCell
-//        if (cell.disabled) {
-//            return
-//        }
-//        
-//        let menuItem = itensMenu[indexPath.row]
-//        
-//        delegate?.menuItemSelected(menuItem: menuItem.itemType!)
-//
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        delegate?.clickSerie(serie: listSeries[indexPath.row])
+    }
     
 }
