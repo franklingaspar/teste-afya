@@ -35,4 +35,21 @@ class AfyaApi {
         })
     }
     
+    static func searchSeries(name: String,completionHandler: @escaping (ResultType<[Search]>) -> Void) {
+        
+        RequestApi.makeRequest(type: [Search].self, toURL: Router.searchSeries(name: name), completion: { (result) in
+            switch result {
+            
+            case .success(let response):
+                if let responseTemp = response {
+                    completionHandler(ResultType.success(responseTemp))
+                }
+                break
+            case .error(let errorString):
+                completionHandler(ResultType.error(errorString))
+                break
+            }
+        })
+    }
+    
 }

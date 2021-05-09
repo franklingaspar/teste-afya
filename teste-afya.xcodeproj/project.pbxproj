@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9214997A264812BE00AADA68 /* CustomSearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92149979264812BE00AADA68 /* CustomSearchViewCell.swift */; };
 		9248C9F72644387A00274F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C9F62644387A00274F98 /* AppDelegate.swift */; };
 		9248C9F92644387A00274F98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C9F82644387A00274F98 /* SceneDelegate.swift */; };
 		9248C9FB2644387A00274F98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C9FA2644387A00274F98 /* ViewController.swift */; };
@@ -39,6 +40,8 @@
 		924F90D426459323002F8B24 /* SerieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F90D326459323002F8B24 /* SerieView.swift */; };
 		924F90D926459FE7002F8B24 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F90D826459FE7002F8B24 /* UILabel.swift */; };
 		924F90E62645C4A5002F8B24 /* SerieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F90E52645C4A5002F8B24 /* SerieViewCell.swift */; };
+		924F90F32648110F002F8B24 /* CustomSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F90F22648110F002F8B24 /* CustomSearch.swift */; };
+		92B2BA71264818E900C80698 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2BA70264818E900C80698 /* Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92149979264812BE00AADA68 /* CustomSearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchViewCell.swift; sourceTree = "<group>"; };
 		9248C9F32644387A00274F98 /* teste-afya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teste-afya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9248C9F62644387A00274F98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9248C9F82644387A00274F98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		924F90D326459323002F8B24 /* SerieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieView.swift; sourceTree = "<group>"; };
 		924F90D826459FE7002F8B24 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		924F90E52645C4A5002F8B24 /* SerieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewCell.swift; sourceTree = "<group>"; };
+		924F90F22648110F002F8B24 /* CustomSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearch.swift; sourceTree = "<group>"; };
+		92B2BA70264818E900C80698 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +236,7 @@
 		9248CA4B26443CCA00274F98 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				924F90FA264811EA002F8B24 /* SearchTablewView */,
 				9248CA4C26443CE600274F98 /* Spinner.swift */,
 			);
 			path = CustomViews;
@@ -282,6 +289,7 @@
 			children = (
 				9248CA9E264452D700274F98 /* Schedule.swift */,
 				9248CAA6264454AC00274F98 /* Show.swift */,
+				92B2BA70264818E900C80698 /* Search.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +326,15 @@
 				924F90E52645C4A5002F8B24 /* SerieViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		924F90FA264811EA002F8B24 /* SearchTablewView */ = {
+			isa = PBXGroup;
+			children = (
+				924F90F22648110F002F8B24 /* CustomSearch.swift */,
+				92149979264812BE00AADA68 /* CustomSearchViewCell.swift */,
+			);
+			path = SearchTablewView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +471,8 @@
 				9248CA5326443D4000274F98 /* HomeView.swift in Sources */,
 				924F90D426459323002F8B24 /* SerieView.swift in Sources */,
 				924F90D926459FE7002F8B24 /* UILabel.swift in Sources */,
+				924F90F32648110F002F8B24 /* CustomSearch.swift in Sources */,
+				9214997A264812BE00AADA68 /* CustomSearchViewCell.swift in Sources */,
 				9248CA3626443A4600274F98 /* BaseViewController.swift in Sources */,
 				9248CA8A26444FE900274F98 /* AfyaApi.swift in Sources */,
 				9248CA992644510A00274F98 /* Router.swift in Sources */,
@@ -462,6 +481,7 @@
 				9248CA4726443C6A00274F98 /* BaseViewCell.swift in Sources */,
 				9248CA932644506B00274F98 /* RequestApi.swift in Sources */,
 				9248CA6826443F0200274F98 /* ConstantsColor.swift in Sources */,
+				92B2BA71264818E900C80698 /* Search.swift in Sources */,
 				9248C9FB2644387A00274F98 /* ViewController.swift in Sources */,
 				9248CA5A26443E5200274F98 /* UIViewController.swift in Sources */,
 				9248C9F72644387A00274F98 /* AppDelegate.swift in Sources */,

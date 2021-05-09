@@ -37,6 +37,8 @@ class HomeView: BaseView {
     }
 
     //MARK:views
+    let searchBarController = UISearchController(searchResultsController: nil)
+    
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     let labelCount = UILabel.makeBigText(title: "")
@@ -56,9 +58,15 @@ class HomeView: BaseView {
         previusButton = getButtom(title: "<")
         previusButton!.addTarget(self, action: #selector(clickPrevius), for: .touchUpInside)
         
-        
         nextButton = getButtom(title: ">")
         nextButton!.addTarget(self, action: #selector(clickNext), for: .touchUpInside)
+        
+        let directionalMargins = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        searchBarController.searchBar.directionalLayoutMargins = directionalMargins
+        searchBarController.searchBar.backgroundColor = .white
+        searchBarController.hidesNavigationBarDuringPresentation = false
+        searchBarController.searchBar.placeholder = "Pesquisar série"
+        searchBarController.searchBar.searchTextField.autocapitalizationType = .none
         
     }
     

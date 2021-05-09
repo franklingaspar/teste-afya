@@ -13,6 +13,7 @@ struct Constants {
         }
         
         static let allSeries = "shows?page=%d"
+        static let searchSeries = "search/shows?q=%@"
         
         
     }

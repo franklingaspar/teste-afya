@@ -53,10 +53,13 @@ extension Routeable {
 enum Router: Routeable {
     
     case allSeries(pagina: Int)
+    case searchSeries(name: String)
     
     internal var method: HTTPMethod {
         switch self {
         case .allSeries:
+            return .get
+        case .searchSeries:
             return .get
 
             
@@ -68,6 +71,9 @@ enum Router: Routeable {
         
         case .allSeries(let id):
             return String(format: Constants.API.allSeries, id)
+        
+        case .searchSeries(let name):
+            return String(format: Constants.API.searchSeries, name)
         }
     }
     
@@ -85,9 +91,6 @@ enum Router: Routeable {
 //            return try! JSONEncoder().encode(parameters)
 //
 
-            
-
-            
         default:
             return nil
         }

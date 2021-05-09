@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomeViewModelProtocool {
     func listSeries(series: [Show])
+    func listSearch(list: [Search])
 }
 
 class HomeViewModel {
@@ -26,4 +27,14 @@ class HomeViewModel {
         })
     }
     
+    func geListSearch(name: String) {
+        AfyaApi.searchSeries(name: name, completionHandler: { result in
+            switch result {
+            case.success(let list):
+                self.delegate?.listSearch(list: list)
+            case .error(let error):
+                print(error)
+            }
+        })
+    }
 }
