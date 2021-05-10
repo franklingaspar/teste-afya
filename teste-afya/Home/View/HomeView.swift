@@ -37,7 +37,7 @@ class HomeView: BaseView {
     }
 
     //MARK:views
-    let searchBarController = UISearchController(searchResultsController: nil)
+    let searchBarController = UISearchController(searchResultsController: SearchViewController())
     
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     

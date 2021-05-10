@@ -20,7 +20,7 @@ class HomeViewCell: BaseCollectionViewCell {
     }()
     
     override func prepareForReuse() {
-        imageView.image =  #imageLiteral(resourceName: "img-placeholder")
+        imageView.image = #imageLiteral(resourceName: "img-placeholder")
     }
     
     override func setupViews() {
@@ -29,8 +29,12 @@ class HomeViewCell: BaseCollectionViewCell {
         imageView.anchor(top: self.topAnchor, paddingTop: 0, bottom: self.bottomAnchor, paddingBottom: 0, left: self.leftAnchor, paddingLeft: 0, right: self.rightAnchor, paddingRight: 0, width: 0, height: 0, centerVertical: false, centerHorizontal: false, view: self)
     }
     
-    func populateView(show: Show) {        
-        imageView.downloaded(from: (show.image?.original)!)
+    func populateView(show: Show) {
+        if let image = show.image?.original {
+            imageView.downloaded(from: image)
+        } else {
+            imageView.image = #imageLiteral(resourceName: "img-placeholder")
+        }
     }
     
 }

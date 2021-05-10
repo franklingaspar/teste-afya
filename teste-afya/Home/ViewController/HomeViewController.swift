@@ -14,7 +14,7 @@ class HomeViewController: BaseViewController {
     var myView: HomeView?
     var homeViewModel: HomeViewModel?
     var pagina = 1
-    
+
     //MARK: livecycler
     override func loadView() {
         super.loadView()
@@ -32,7 +32,7 @@ class HomeViewController: BaseViewController {
         
         myView?.searchBarController.delegate = self
         myView?.searchBarController.searchResultsUpdater = self
-        
+        myView?.searchBarController.searchBar.sizeToFit()
         self.navigationItem.titleView = myView?.searchBarController.searchBar
         self.definesPresentationContext = true
         self.navigationItem.hidesSearchBarWhenScrolling = false
@@ -44,19 +44,13 @@ class HomeViewController: BaseViewController {
         myView?.paginas = pagina
     }
     
-    private func goToSeriViewController(_ serie: Show) {
-        let vc = SerieViewController()
-        vc.serie = serie
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
 }
 
 extension HomeViewController: HomeViewModelProtocool {
     func listSearch(list: [Search]) {
-        CustomSearch().showCustomSearch(list: list, on: self, completionHandler: { serie in
-            self.goToSeriViewController(serie)
-        })
+        let vc = myView?.searchBarController.searchResultsController as? SearchViewController
+        vc?.navigationViewController = self.navigationController
+        vc?.listSearch = list
     }
     
     func listSeries(series: [Show]) {
@@ -67,7 +61,9 @@ extension HomeViewController: HomeViewModelProtocool {
 
 extension HomeViewController: HomeViewProtocool {
     func clickSerie(serie: Show) {
-        goToSeriViewController(serie)
+        let vc = SerieViewController()
+        vc.serie = serie
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func clickNext() {
@@ -88,12 +84,9 @@ extension HomeViewController: HomeViewProtocool {
 
 extension HomeViewController: UISearchControllerDelegate, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        
         if searchController.searchBar.text != "" {
             homeViewModel?.geListSearch(name: searchController.searchBar.text!)
         }
-    
-        
     }
-    
+
 }

@@ -49,7 +49,12 @@ class SerieViewCell: BaseViewCell {
     }
     
     func populateView(_ serie: Show) {
-        img.downloaded(from: (serie.image?.medium)!)
+        if let img = serie.image?.medium {
+            self.img.downloaded(from: img)
+        } else {
+            img.image = #imageLiteral(resourceName: "img-placeholder")
+        }
+
         name.text = serie.name
         paidText(label: genere, text: getGeneres(serie.genres!))
         paidText(label: resume, text: (serie.summary)!)

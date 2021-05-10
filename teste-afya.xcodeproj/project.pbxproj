@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9214997A264812BE00AADA68 /* CustomSearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92149979264812BE00AADA68 /* CustomSearchViewCell.swift */; };
+		9215D9C82649805500B3EE83 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9215D9C72649805500B3EE83 /* SearchView.swift */; };
+		9215D9CD264980D100B3EE83 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9215D9CC264980D100B3EE83 /* SearchViewCell.swift */; };
 		9248C9F72644387A00274F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C9F62644387A00274F98 /* AppDelegate.swift */; };
 		9248C9F92644387A00274F98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C9F82644387A00274F98 /* SceneDelegate.swift */; };
 		9248C9FB2644387A00274F98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C9FA2644387A00274F98 /* ViewController.swift */; };
@@ -40,8 +41,8 @@
 		924F90D426459323002F8B24 /* SerieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F90D326459323002F8B24 /* SerieView.swift */; };
 		924F90D926459FE7002F8B24 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F90D826459FE7002F8B24 /* UILabel.swift */; };
 		924F90E62645C4A5002F8B24 /* SerieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F90E52645C4A5002F8B24 /* SerieViewCell.swift */; };
-		924F90F32648110F002F8B24 /* CustomSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F90F22648110F002F8B24 /* CustomSearch.swift */; };
 		92B2BA71264818E900C80698 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2BA70264818E900C80698 /* Search.swift */; };
+		92B2BA7826497EF700C80698 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2BA7726497EF700C80698 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		92149979264812BE00AADA68 /* CustomSearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchViewCell.swift; sourceTree = "<group>"; };
+		9215D9C72649805500B3EE83 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		9215D9CC264980D100B3EE83 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		9248C9F32644387A00274F98 /* teste-afya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teste-afya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9248C9F62644387A00274F98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9248C9F82644387A00274F98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,8 +103,8 @@
 		924F90D326459323002F8B24 /* SerieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieView.swift; sourceTree = "<group>"; };
 		924F90D826459FE7002F8B24 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		924F90E52645C4A5002F8B24 /* SerieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewCell.swift; sourceTree = "<group>"; };
-		924F90F22648110F002F8B24 /* CustomSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearch.swift; sourceTree = "<group>"; };
 		92B2BA70264818E900C80698 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		92B2BA7726497EF700C80698 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9215D9C62649804900B3EE83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9215D9C72649805500B3EE83 /* SearchView.swift */,
+				9215D9CC264980D100B3EE83 /* SearchViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9248C9EA2644387A00274F98 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +164,7 @@
 		9248C9F52644387A00274F98 /* teste-afya */ = {
 			isa = PBXGroup;
 			children = (
+				92B2BA7526497ED900C80698 /* Search */,
 				9248CAC326458C3600274F98 /* Serie */,
 				9248CA2C264439C800274F98 /* Home */,
 				9248CA7C2644424900274F98 /* Api */,
@@ -236,7 +248,6 @@
 		9248CA4B26443CCA00274F98 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				924F90FA264811EA002F8B24 /* SearchTablewView */,
 				9248CA4C26443CE600274F98 /* Spinner.swift */,
 			);
 			path = CustomViews;
@@ -328,13 +339,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		924F90FA264811EA002F8B24 /* SearchTablewView */ = {
+		92B2BA7526497ED900C80698 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				924F90F22648110F002F8B24 /* CustomSearch.swift */,
-				92149979264812BE00AADA68 /* CustomSearchViewCell.swift */,
+				9215D9C62649804900B3EE83 /* View */,
+				92B2BA7626497EDF00C80698 /* ViewController */,
 			);
-			path = SearchTablewView;
+			path = Search;
+			sourceTree = "<group>";
+		};
+		92B2BA7626497EDF00C80698 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92B2BA7726497EF700C80698 /* SearchViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,11 +490,10 @@
 				9248CA5326443D4000274F98 /* HomeView.swift in Sources */,
 				924F90D426459323002F8B24 /* SerieView.swift in Sources */,
 				924F90D926459FE7002F8B24 /* UILabel.swift in Sources */,
-				924F90F32648110F002F8B24 /* CustomSearch.swift in Sources */,
-				9214997A264812BE00AADA68 /* CustomSearchViewCell.swift in Sources */,
 				9248CA3626443A4600274F98 /* BaseViewController.swift in Sources */,
 				9248CA8A26444FE900274F98 /* AfyaApi.swift in Sources */,
 				9248CA992644510A00274F98 /* Router.swift in Sources */,
+				9215D9C82649805500B3EE83 /* SearchView.swift in Sources */,
 				9248CAC626458C6700274F98 /* SerieViewController.swift in Sources */,
 				9248CABA26455E5E00274F98 /* BaseCollectionViewCell.swift in Sources */,
 				9248CA4726443C6A00274F98 /* BaseViewCell.swift in Sources */,
@@ -489,9 +507,11 @@
 				924F90E62645C4A5002F8B24 /* SerieViewCell.swift in Sources */,
 				9248CA78264441F200274F98 /* HomeViewCell.swift in Sources */,
 				9248CA6226443E9E00274F98 /* UIColor.swift in Sources */,
+				92B2BA7826497EF700C80698 /* SearchViewController.swift in Sources */,
 				9248CABF2645602300274F98 /* UIImageView.swift in Sources */,
 				9248C9F92644387A00274F98 /* SceneDelegate.swift in Sources */,
 				9248CA2F264439EC00274F98 /* HomeViewController.swift in Sources */,
+				9215D9CD264980D100B3EE83 /* SearchViewCell.swift in Sources */,
 				9248CA9F264452D700274F98 /* Schedule.swift in Sources */,
 				9248CA7F2644425F00274F98 /* Constants.swift in Sources */,
 				9248CAA7264454AC00274F98 /* Show.swift in Sources */,
